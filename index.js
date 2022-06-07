@@ -5,27 +5,33 @@ class Stack {
     }
 
     push(item){
-        this.#stack.push(item);
-        
+        this.#stack.unshift(item); 
     }
 
     pop(){
-        return this.#stack.shift();
+        this.#stack.shift();
     }
 
     peek(){
-        return this.#stack[0];
-
+        return this.#stack[this.#stack.length -1];
     }
 
     get showList(){
-        console.log('showlist', this.#stack.toString());
+        return this.#stack
     }
 }
 
 
 class Queue {
+ #queue = [];
 
+ constructor(initialList){
+     if(initalList) this.#queue = initialList;
+ }
+
+ enqueue(){
+     return this
+ }
 }
 
 module.exports = { Stack, Queue };
