@@ -1,7 +1,7 @@
 class Stack {
     #stack = [];
     constructor(initialList){
-        if(initialList) this.#stack = initialList;
+        if (initialList) this.#stack = initialList;
     }
 
     push(item){
@@ -13,11 +13,11 @@ class Stack {
     }
 
     peek(){
-        return this.#stack[this.#stack.length -1];
+        return this.#stack[this.#stack.length -1].toString();
     }
 
     get showList(){
-        return this.#stack
+        return this.#stack.toString();
     }
 }
 
